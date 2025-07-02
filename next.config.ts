@@ -20,9 +20,14 @@ const nextConfig: NextConfig = {
         hostname: '139.84.145.64',
         port: '1337',
         pathname: '/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'galtechstarpi-production.up.railway.app',
+        pathname: '/uploads/**',
       }
     ],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
