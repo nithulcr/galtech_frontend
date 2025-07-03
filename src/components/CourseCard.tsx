@@ -39,16 +39,17 @@ const CourseCard: React.FC<CourseCardProps> = ({
     <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col overflow-hidden">
       {imageUrl ? (
         <Image
-  src={encodeURI(imageUrl)}
-  alt={title}
-  width={400}
-  height={200}
-  className="w-full h-48 object-cover"
-  unoptimized // <--- disables Next.js image optimization (fixes 400 error)
-  onError={(e) => {
-    e.currentTarget.src = '/fallback.jpg'; // Optional local fallback
-  }}
-/>
+          src={encodeURI(imageUrl)}
+          alt={title}
+          width={400}
+          height={200}
+          className="w-full h-48 object-cover"
+          unoptimized // <--- disables Next.js image optimization (fixes 400 error)
+          onError={(e) => {
+            e.currentTarget.src = '/fallback.jpg'; // Optional local fallback
+          }}
+        />
+
 
       ) : (
         icon || <DefaultCourseIcon />
